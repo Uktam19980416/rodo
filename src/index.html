@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imzo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="./output.css" rel="stylesheet">
+  <style>
+    .container {
+      border: 2px solid #CBD5E0;
+      width: 100%;
+      max-width: 1440px;
+      margin: auto;
+      padding: 0.5rem;
+    }
+
+    .range-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+    }
+
+    .range-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .range-container input[type="range"] {
+      position: absolute;
+    }
+
+    .range-container .vertical-range {
+      transform: rotate(-90deg);
+      top: 50%;
+      right: -200px;
+      width: 100%;
+    }
+
+    .range-container .horizontal-range {
+      bottom: -30px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="flex items-center justify-between">
+      <div class="flex gap-4">
+        <div class="bg-slate-300 px-3 py-2 rounded-full cursor-pointer">
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <p>№1</p>
+        <div class="flex flex-col leading-4">
+          <p>Окно</p>
+          <p class="text-xs font-bold text-slate-400">ПВХ Trio 60</p>
+        </div>
+      </div>
+      <div><i class="fa-regular fa-trash-can"></i></div>
+    </div>
+    <div class="border-2 border-slate-300 px-2 py-4">
+      <div class="flex items-center justify-between">
+        <div class="w-3/12 flex flex-col gap-2">
+          <div>
+            <p>Одностворчатое</p>
+            <div class="cursor-pointer flex">
+              <img src="../images/scheme_1_1.svg" alt="Scheme1" id="toggleButton1">
+              <div class="hidden" id="toggleContent1">
+                <div class="grid grid-cols-3 gap-1 w-[180px] p-2 shadow">
+                  <img class="w-14" src="https://imzo.uz/uploads/configurator/single/scheme_1_1.svg" alt="">
+                  <img class="w-14" src="https://imzo.uz/uploads/configurator/single/scheme_1_3.svg" alt="">
+                  <img class="w-14" src="https://imzo.uz/uploads/configurator/single/scheme_1_4.svg" alt="">
+                  <img class="w-14" src="https://imzo.uz/uploads/configurator/single/scheme_1_2.svg" alt="">
+                  <img class="w-14" src="https://imzo.uz/uploads/configurator/single/scheme_1_5.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cursor-pointer">
+            <p>Двухстворчатое</p>
+            <div class="flex items-center gap-1">
+              <div class="flex items-center gap-1 cursor-pointer" id="toggleButton2">
+                <img src="../images/scheme_1_1.svg" alt="Scheme1">
+                <img src="../images/scheme_1_1.svg" alt="Scheme1">
+              </div>
+            </div>
+            <div class="hidden" id="toggleContent2">
+              <div class="grid grid-cols-3 gap-1 w-[300px] p-2 shadow">
+                <img class="w-18" src="https://imzo.uz/uploads/configurator/double/scheme_2_1.svg" alt="">
+                <img class="w-18" src="https://imzo.uz/uploads/configurator/double/scheme_2_2.svg" alt="">
+                <img class="w-18" src="https://imzo.uz/uploads/configurator/double/scheme_2_2_1.svg" alt="">
+                <img class="w-18" src="https://imzo.uz/uploads/configurator/double/scheme_2_3.svg" alt="">
+                <img class="w-18" src="https://imzo.uz/uploads/configurator/double/scheme_2_3_1.svg" alt="">
+                <img class="w-18" src="https://imzo.uz/uploads/configurator/double/scheme_2_4.svg" alt="">
+                <img class="w-18" src="https://imzo.uz/uploads/configurator/double/scheme_2_4_2.svg" alt="">
+                <img class="w-18" src="https://imzo.uz/uploads/configurator/double/scheme_2_4_1.svg" alt="">
+                <img class="w-18" src="https://imzo.uz/uploads/configurator/double/scheme_2_4_4.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="cursor-pointer">
+            <p>Трехстворчатое</p>
+            <div class="flex items-center gap-1 cursor-pointer" id="toggleButton3">
+              <img src="../images/scheme_1_1.svg" alt="Scheme1">
+              <img src="../images/scheme_1_1.svg" alt="Scheme1">
+              <img src="../images/scheme_1_1.svg" alt="Scheme1">
+            </div>
+            <div class="hidden" id="toggleContent3">
+              <div class="grid grid-cols-3 gap-1 w-[400px] p-2 shadow">
+                <img class="w-18" src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_1.svg" alt="">
+                <img class="w-18" src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_2.svg" alt="">
+                <img class="w-18" src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_2_1.svg" alt="">
+                <img class="w-18" src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_3.svg" alt="">
+                <img class="w-18" src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_3_1.svg" alt="">
+                <img class="w-18" src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_4.svg" alt="">
+                <img class="w-18" src="https://imzo.uz/uploads/configurator/tricuspid/scheme_3_4_4.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-6/12 flex flex-col items-center">
+          <div class="range-container">
+            <img src="https://imzo.uz/uploads/configurator/single/image_1_1.svg" alt="Image">
+            <input type="range" class="vertical-range" min="0" max="100" value="100">
+            <input type="range" class="horizontal-range" min="0" max="100" value="100">
+          </div>
+        </div>
+        <div class="w-3/12">
+          <div class="flex flex-col gap-3">
+            <p class="text-lg font-bold">Детали расчёта</p>
+            <p class="text-lg font-bold">Тип профиля</p>
+            <div class="grid grid-cols-2 gap-1">
+              <button class="py-2 text-white bg-black rounded-lg">ПВХ</button>
+              <button class="py-2 text-white bg-black rounded-lg">Алюминий</button>
+            </div>
+            <div>
+              <p class="text-lg font-bold">Серия профиля</p>
+              <select name="" id="" class="w-full border-2 py-2 rounded-lg">
+                <option value="">Trio 60</option>
+                <option value="">Quattro 60</option>
+                <option value="">Engelberg 70</option>
+                <option value="">Engelberg 80</option>
+              </select>
+            </div>
+            <div>
+              <p class="text-lg font-bold">Стеклопакет</p>
+              <select name="" id="" class="w-full border-2 py-2 rounded-lg">
+                <option value="">Стандартный</option>
+                <option value="">Энергосберегающий</option>
+                <option value="">Солнцезащитный</option>
+              </select>
+            </div>
+            <div>
+              <p class="text-lg font-bold">Механизм</p>
+              <select name="" id="" class="w-full border-2 py-2 rounded-lg">
+                <option value="">Fornax</option>
+              </select>
+            </div>
+            <div>
+              <p class="text-lg font-bold">Ламинация</p>
+              <ul class="flex items-center gap-1">
+                <li class="w-[30px]"><img class="w-full h-full object-cover rounded-full border-2 cursor-pointer"
+                    src="https://imzo.uz/uploads/colors/e76be692729f.jpg" alt=""></li>
+                <li class="w-[30px]"><img class="w-full h-full object-cover rounded-full border-2 cursor-pointer"
+                    src="https://imzo.uz/uploads/colors/225bb0d3eea0.jpg" alt=""></li>
+                <li class="w-[30px]"><img class="w-full h-full object-cover rounded-full border-2 cursor-pointer"
+                    src="https://imzo.uz/uploads/colors/8fdcf9ef4b7c.jpg" alt=""></li>
+                <li class="w-[30px]"><img class="w-full h-full object-cover rounded-full border-2 cursor-pointer"
+                    src="https://imzo.uz/uploads/colors/efc70dd53af2.jpg" alt=""></li>
+                <li class="w-[30px]"><img class="w-full h-full object-cover rounded-full border-2 cursor-pointer"
+                    src="https://imzo.uz/uploads/colors/3fdc56b04eb2.jpg" alt=""></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-lg font-bold">Цвет фурнитуры</p>
+              <ul class="flex items-center gap-1">
+                <li class="w-[30px]"><img class="w-full h-full object-cover rounded-full border-2 cursor-pointer"
+                    src="https://imzo.uz/uploads/colors/e76be692729f.jpg" alt=""></li>
+                <li class="w-[30px]"><img class="w-full h-full object-cover rounded-full border-2 cursor-pointer"
+                    src="https://imzo.uz/uploads/colors/225bb0d3eea0.jpg" alt=""></li>
+                <li class="w-[30px]"><img class="w-full h-full object-cover rounded-full border-2 cursor-pointer"
+                    src="https://imzo.uz/uploads/colors/8fdcf9ef4b7c.jpg" alt=""></li>
+                <li class="w-[30px]"><img class="w-full h-full object-cover rounded-full border-2 cursor-pointer"
+                    src="https://imzo.uz/uploads/colors/efc70dd53af2.jpg" alt=""></li>
+                <li class="w-[30px]"><img class="w-full h-full object-cover rounded-full border-2 cursor-pointer"
+                    src="https://imzo.uz/uploads/colors/3fdc56b04eb2.jpg" alt=""></li>
+                <li class="w-[30px]"><img class="w-full h-full object-cover rounded-full border-2 cursor-pointer"
+                    src="https://imzo.uz/uploads/colors/22823cdffea8.jpg" alt=""></li>
+              </ul>
+            </div>
+            <div>
+              <p>Комплектующие</p>
+              <div>
+                <input type="checkbox" id="shift">
+                <label for="shift">Подоконник</label>
+              </div>
+              <div>
+                <input type="checkbox" id="setka">
+                <label for="setka">Москитная сетка</label>
+              </div>
+              <div>
+                <input type="checkbox" id="otliv">
+                <label for="otliv">Отлив</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../script.js"></script>
+</body>
+
+</html>
